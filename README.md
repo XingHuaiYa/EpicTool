@@ -128,7 +128,7 @@ Material Design 3
 
 使用说明
 
-git clone https://github.com/你的用户名/EpicShield-Unpacker-Kotlin.git
+git clone https://github.com/XingHuaiYa/EpicTool
 
 导入 Android Code Studio 后即可编译。
 
