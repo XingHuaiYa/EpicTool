@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="#F8F9FA">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@android:color/transparent"
+         app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             app:title="Epic 静态脱壳工具"
+             app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
+             app:titleCentered="true">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="16dp"
+             android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 app:cardElevation="2dp"
+                 app:strokeWidth="0dp"
+                 app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:padding="16dp"
+                     android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:hint="待处理 APK 路径"
+                         app:boxBackgroundColor="@android:color/transparent"
+                         style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                         app:startIconDrawable="@android:drawable/ic_menu_save">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:textSize="13sp"
+                             android:inputType="text"
+                             android:id="@+id/et_apk_path" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="12dp">
+
+                        <com.google.android.material.button.MaterialButton
+                             android:layout_height="54dp"
+                             android:layout_width="0dp"
+                             app:icon="@android:drawable/ic_menu_search"
+                             android:layout_marginEnd="8dp"
+                             style="@style/Widget.Material3.Button.TonalButton"
+                             android:layout_weight="1"
+                             android:id="@+id/btn_select"
+                             android:text="选取文件" />
+
+                        <com.google.android.material.button.MaterialButton
+                             android:layout_height="54dp"
+                             android:layout_width="0dp"
+                             app:icon="@android:drawable/ic_media_play"
+                             style="@style/Widget.Material3.Button"
+                             android:layout_weight="1.5"
+                             android:id="@+id/btn_start"
+                             android:text="分析并脱壳" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                 android:textColor="?attr/colorPrimary"
+                 android:layout_marginTop="24dp"
+                 android:layout_marginStart="4dp"
+                 android:text="实时执行日志" />
+
+            <com.google.android.material.card.MaterialCardView
+                 android:layout_height="350dp"
+                 android:layout_width="match_parent"
+                 app:strokeColor="#E0E0E0"
+                 app:cardElevation="0dp"
+                 app:strokeWidth="1dp"
+                 app:cardBackgroundColor="#F1F3F4"
+                 android:layout_marginTop="8dp"
+                 app:cardCornerRadius="16dp">
+
+                <ScrollView
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:scrollbars="vertical"
+                     android:scrollbarStyle="insideOverlay"
+                     android:nestedScrollingEnabled="true"
+                     android:id="@+id/log_scroller">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:padding="16dp"
+                         android:fontFamily="monospace"
+                         android:textSize="12sp"
+                         android:textColor="#455A64"
+                         android:lineSpacingExtra="4dp"
+                         android:id="@+id/tv_log"
+                         android:text="准备就绪，请选择 APK..." />
+
+                </ScrollView>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center"
+                 android:alpha="0.5"
+                 android:textSize="11sp"
+                 android:layout_marginTop="20dp"
+                 android:text="Powered by MT论坛 @战神科技" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
