@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "EpicTool",
+  title: "/EpicTool/",
   description: "Epic 加固分析与研究",
   lang: 'zh-CN',
   themeConfig: {
