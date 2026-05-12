@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: '/EpicTool/',
+  // 必须添加 base 配置，否则在 GitHub Pages 上会导致资源引用 404
+  base: '/EpicTool/', 
+  
   title: "EpicTool",
   description: "Epic 加固分析与研究",
   lang: 'zh-CN',
@@ -38,12 +40,10 @@ export default defineConfig({
       }
     ],
 
-    // 社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/XingHuaiYa/EpicTool' }
     ],
 
-    // 页脚配置
     footer: {
       message: '基于研究目的开发',
       copyright: 'Copyright © 2026-present XingHuaiYa'
